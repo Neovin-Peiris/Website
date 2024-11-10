@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 800px;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100
+}
+ 
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+.footer {
+    background-color: #081b29; /* Light grey background */
+    text-align: center;
+}
+
+.footer-content {
+    margin: 0 auto;
+    max-width: 100%; 
+    background-color: #081b297e;
+}
+
+.footer-nav {
+    margin-top: 5px;
+}
+
+.footer-nav a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #00abf0;
+
+}
+
+.footer-nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+
+
+/* Main page */
+.mainpage {
+    height: 100vh;
+    background: #081b29;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.mainpage-content {
+    max-width: 600px;
+    animation: fadeInBackground 5s ease forwards; 
+}
+
+.mainpage-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.mainpage-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .2s;
+}
+
+.mainpage-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.mainpage-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.mainpage-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+} 
+
+.mainpage-icon {
+    margin-top: 10px;
+    margin-left: 960px;
+    display: flex; /* Use flexbox for the container */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    animation: fadeInBackground 5s ease forwards; 
+}
+
+.mainpage-icon a {
+    position: relative;
+    display: flex; /* Change to flex for centering text */
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 5px 0; /* Optional: Add some space between logos */
+}
+
+.mainpage-icon a:hover {
+    color: #081b29;
+}
+
+
+.mainpage-icon a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0ed;
+    z-index: -1;
+    transition: .5s;
+}
+
+.mainpage-icon a:hover::before {
+     width: 100%;
+}
+
+
+
+
+
+/* about page */
+
+.aboutpage { 
+    height: 100vh; 
+    background-attachment: fixed;
+    background-image: url(bg.jpg); 
+    background-size: cover; 
+    background-position: center; 
+    display: flex; 
+    align-items:center; 
+    padding: 0% 10%; 
+}
+
+.aboutpage h1 { 
+    position: absolute; 
+    top: 60px; 
+    font-size: 400%; 
+    margin-top: 20px;
+    font-weight: 700; 
+    line-height: 1.2;   
+    animation: fadeInBackground 2s ease forwards; 
+}
+
+.aboutpage-content { 
+    max-width: 600px; 
+    animation: fadeInBackground 7.5s ease forwards; 
+}
+
+.aboutpage-content h3 { 
+    font-size: 250%; 
+    font-weight: 700; 
+    margin-top: 0px;
+    color: #00abf0; 
+}
+
+.aboutpage-content h5 {
+    font-size: 115%;
+    margin-top: 30px;
+}
+
+.aboutpage-content p {
+    font-size: 100%;
+}
+
+.aboutpage-icon { 
+    position: relative; 
+    left: 807px; 
+    margin-top: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    animation: fadeInBackground 2s ease forwards; 
+}
+
+.aboutpage-icon a { 
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 40px; 
+    height: 40px; 
+    background: transparent; 
+    border: 2px solid #00abf0; 
+    border-radius: 50%; 
+    font-size: 20px; 
+    color: #00abf0; 
+    text-decoration: none; 
+    z-index: 1; 
+    overflow: hidden; 
+    transition: .5s; 
+    margin: 5px 0; /* Optional: Add some space between logos */ 
+}
+
+.aboutpage-icon a:hover { 
+    color: #081b29; 
+}
+
+.aboutpage-icon a::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 0; 
+    height: 100%; 
+    background: #00abf0ed; 
+    z-index: -1; 
+    transition: .5s; 
+}
+
+.aboutpage-icon a:hover::before { 
+    width: 100%; 
+}
+
+
+/* contact page */
+.contactpage { 
+    height: 100vh; 
+    background-attachment: fixed;
+    background-image: url(bg.jpg); 
+    background-size: cover; 
+    background-position: center; 
+    display: flex; 
+    align-items:center; 
+    padding: 0% 10%; 
+}
+
+.contactpage h1 { 
+    position: absolute; 
+    color: #00abf0;
+    top: 1px; 
+    font-size: 300%; 
+    margin-top: 20px;
+    font-weight: 700; 
+    line-height: 1.2; 
+    animation: fadeInBackground 2s ease forwards; 
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    animation: fadeInBackground 5s ease forwards; 
+}
+
+fieldset {
+    border: 2px solid white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+legend {
+    font-size: 150%;
+    font-weight: bold;
+    color:white;
+}
+
+label {
+    font-weight: bold;
+    color: #00abf0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    color: white;
+    background-color: #081b29a6;
+    border: 3px solid #00acf069;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #081b29;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    margin-top: 30px;
+    background-color: #00acf052;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: fadeInBackground 5s ease forwards; 
+}
+
+button[type="submit"]:hover {
+    background-color: #00abf0;
+}
+
+.contactpage-icon { 
+    position: relative;
+    margin-top: 10px; 
+    left: 115px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    animation: fadeInBackground 5s ease forwards; 
+}
+
+.contactpage-icon a { 
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 40px; 
+    height: 40px; 
+    background: transparent; 
+    border: 2px solid #00abf0; 
+    border-radius: 50%; 
+    font-size: 20px; 
+    color: #00abf0; 
+    text-decoration: none; 
+    z-index: 1; 
+    overflow: hidden; 
+    transition: .5s; 
+    margin: 5px 0;
+}
+
+.contactpage-icon a:hover { 
+    color: #081b29; 
+}
+
+.contactpage-icon a::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 0; 
+    height: 100%; 
+    background: #00abf0ed; 
+    z-index: -1; 
+    transition: .5s; 
+}
+
+.contactpage-icon a:hover::before { 
+    width: 100%; 
+}
+
+
+
+
+
+/* Blog Page */
+.blogpage {
+    height: 100vh;
+    background: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.blogpage h1 {
+    position: absolute; 
+    color: #00abf0;
+    top: 1px; 
+    font-size: 300%; 
+    margin-top: 20px;
+    font-weight: 700; 
+    line-height: 1.2; 
+    animation: fadeInBackground 2s ease forwards;
+}
+
+.blogpage-posts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    animation: fadeInBackground 5s ease forwards;
+}
+
+.blogpage-posts article {
+    width: 80%;
+    background-color: #081b29;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blogpage-posts article h2 {
+    font-size: 20px;
+    color: #00abf0;
+    margin-bottom: 10px;
+}
+
+.blogpage-posts article p {
+    font-size: 1em;
+    color: #ededed;
+}
+
+.blogpage-posts article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 171, 240, 0.5);
+}
+
+.blogpage-icon { 
+    position: relative;
+    display: flex;
+    align-items: last baseline;
+    margin-right: 40px;
+    left: 155px;
+    flex-direction: column; 
+    animation: fadeInBackground 5s ease forwards; 
+}
+
+.blogpage-icon a { 
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 40px; 
+    height: 40px; 
+    background: transparent; 
+    border: 2px solid #00abf0; 
+    border-radius: 50%; 
+    font-size: 20px; 
+    color: #00abf0; 
+    text-decoration: none; 
+    z-index: 1; 
+    overflow: hidden; 
+    transition: .5s; 
+    margin: 5px 0;
+}
+
+.blogpage-icon a:hover { 
+    color: #081b29; 
+}
+
+.blogpage-icon a::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 0; 
+    height: 100%; 
+    background: #00abf0ed; 
+    z-index: -1; 
+    transition: .5s; 
+}
+
+.blogpage-icon a:hover::before { 
+    width: 100%; 
+}
+@keyframes showRight { 
+    100%{ 
+        width: 0; 
+    } 
+}
+
+@keyframes fadeInBackground {
+    0% { 
+        opacity: 0; 
+    } 
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .header {
+        left: 0;
+        padding: 10px 5%;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar a {
+        font-size: 16px; /* Smaller font size for mobile */
+        margin-left: 20px; /* Reduced margin */
+    }
+
+    .mainpage {
+        padding: 0 5%; /* Adjust padding */
+    }
+
+    .mainpage-content h1 {
+        font-size: 36px; /* Smaller heading */
+    }
+
+    .mainpage-content h3 {
+        font-size: 24px; /* Smaller subheading */
+    }
+
+    .mainpage-content p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+
+    .btn-box {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+    }
+
+    .btn-box a {
+        width: 100%; /* Full width buttons */
+        margin-bottom: 10px; /* Space between buttons */
+    }
+
+    .mainpage-icon {
+        margin-left: 0; /* Center icon section */
+    }
+
+    .aboutpage h1, .contactpage h1, .blogpage h1 {
+        font-size: 40px; /* Smaller heading for sections */
+    }
+
+    .aboutpage-content h3, .contactpage h1 {
+        font-size: 28px; /* Smaller subheading */
+    }
+
+    .aboutpage-content h5,
+    .aboutpage-content p,
+    .contact-form label {
+        font-size: 14px; /* Smaller text for about page and contact form */
+    }
+
+    .contact-form {
+        flex-direction: column; /* Stack fields vertically */
+    }
+
+    .contact-form fieldset {
+        width: 100%; /* Full width fieldset */
+    }
+
+    .contactpage-icon {
+        left: 0; /* Center icon section */
+    }
+
+    .blogpage-posts {
+        flex-direction: column; /* Stack blog posts */
+    }
+
+    .blogpage-posts article {
+        width: 100%; /* Full width articles */
+        margin-bottom: 20px; /* Space between articles */
+    }
+
+    .blogpage-icon {
+        left: 0; /* Center icon section */
+    }
+}
